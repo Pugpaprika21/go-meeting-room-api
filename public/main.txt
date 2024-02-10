@@ -1,0 +1,12 @@
+// 1 error foreign key
+
+[error] invalid field found for struct github.com/Pugpaprika21/go-gin/models.MeetingRoomFormRequest's field MeetingRoomEquipment: define a valid foreign key for relations or implement the Valuer/Scanner interface
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+// 2
+
+runtime error: invalid memory address or nil pointer dereference
+C:/Program Files/Go/src/runtime/panic.go:261 (0xb4f3c6)
+        panicmem: panic(memoryError)
+
+// 3 Error 1452 (23000): Cannot add or update a child row: a foreign key constraint fails (`go-meeting-room-api-db`.`master_setting_roles`, CONSTRAINT `fk_master_setting_roles_user` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`))[2.438ms] [rows:0] INSERT INTO `master_setting_roles` (`active_status`,`created_at`,`ref_field`,`ref_id`,`ref_table`,`user_id`) VALUES (true,'2024-02-06 04:07:42.935','id',1,'users',1)

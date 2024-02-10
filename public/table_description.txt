@@ -1,0 +1,59 @@
+๊User (ลูกค้า):
+๊UserID (รหัสลูกค้า)
+FirstName (ชื่อ)
+LastName (นามสกุล)
+ContactNumber (หมายเลขติดต่อ)
+Email (อีเมล์)
+Address (ที่อยู่)
+
+MasterRole (เพิ่มสิทธิ์):
+RoleCode (รหัสตำเเหน่ง)
+RoleName (ชื่อตำเเหน่ง)
+ActiveStatus (สถานะการใช้งาน)
+
+MasterSettingRole (จัดการสิทธิ์):
+๊UserID (รหัสลูกค้า) อ้างอิงจาก User (ลูกค้า): user 1 คนมีได้หลายสิทธิ์
+RefID (รหัสอ้างอิง)
+RefTable (ชื่อตารางอ้างอิง)
+RefField (ชื่อฟิลล์อ้างอิง)
+ActiveStatus (สถานะการใช้งาน)
+
+Equipment (อุปกรณ์):
+EquipmentID (รหัสอุปกรณ์)
+EquipmentName (ชื่ออุปกรณ์)
+Description (คำอธิบาย)
+Manufacturer (ผู้ผลิต)
+ModelEquipment (โมเดล)
+SerialNumber (หมายเลขซีเรียล)
+
+ServiceRequests (คำขอบริการ):
+RequestID (รหัสคำขอ)
+๊UserID (รหัสลูกค้า) อ้างอิงจาก User (ลูกค้า):
+EquipmentID (รหัสอุปกรณ์) อ้างอิงจาก Equipment (อุปกรณ์):
+RequestDate (วันที่แจ้งซ่อม)
+Description (คำอธิบายปัญหา)
+
+ServiceAssignments (การมอบหมายงาน):
+AssignmentID (รหัสการมอบหมาย)
+RequestID (รหัสคำขอ) อ้างอิงจาก ServiceRequests (คำขอบริการ):
+๊UserID (รหัสลูกค้า) อ้างอิงจาก User (ลูกค้า):
+AssignmentDate (วันที่มอบหมาย)
+CompletionDate (วันที่เสร็จสิ้น)
+
+ServiceStatus (สถานะการซ่อม):
+StatusID (รหัสสถานะ)
+StatusName (ชื่อสถานะ)
+
+ServiceHistory (ประวัติการซ่อม):
+HistoryID (รหัสประวัติ)
+RequestID (รหัสคำขอ) อ้างอิงจาก ServiceRequests (คำขอบริการ):
+๊UserID (รหัสลูกค้า) อ้างอิงจาก User (ลูกค้า):
+StartDate (วันที่เริ่มซ่อม)
+EndDate (วันที่สิ้นสุด)
+StatusID (รหัสสถานะ)
+
+PaymentTransactions (รายการชำระเงิน):
+TransactionID (รหัสรายการ)
+RequestID (รหัสคำขอ) อ้างอิงจาก ServiceRequests (คำขอบริการ):
+Amount (จำนวนเงิน)
+PaymentDate (วันที่ชำระเงิน)
