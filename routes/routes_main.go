@@ -81,7 +81,7 @@ func Setup(router *gin.Engine) {
 				meetingRoomEquipmentsRepository := repository.NewMeetingRoomEquipmentsRepository()
 				meetingRoomEquipmentsController := controller.NewMeetingRoomEquipmentsController(meetingRoomEquipmentsRepository)
 				meetingRoomEquipmentsRouter.POST("/create", meetingRoomEquipmentsController.CreateEquipment)
-				meetingRoomEquipmentsRouter.GET("/show/:id", meetingRoomEquipmentsController.CreateEquipment)
+				meetingRoomEquipmentsRouter.GET("/show/:id", meetingRoomEquipmentsController.GetEquipmentByID)
 				meetingRoomEquipmentsRouter.PUT("/update/:id", meetingRoomEquipmentsController.UpdateEquipment)
 				meetingRoomEquipmentsRouter.DELETE("/delete/:id", meetingRoomEquipmentsController.DeletetEquipmentByID)
 			}
